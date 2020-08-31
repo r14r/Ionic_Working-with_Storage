@@ -1,0 +1,47 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+
+		<ion-title>Developer</ion-title>
+
+		<ion-buttons slot="end">
+			<ion-button (click)="addData()">
+				<ion-icon name="add"></ion-icon>
+			</ion-button>
+		</ion-buttons>
+
+	</ion-toolbar>
+</ion-header>
+
+<ion-content class="padding">
+	<ion-list>
+		<ion-item-sliding #item *ngFor="let item of items">
+			<button ion-item (click)="itemTapped($event, item)">
+				<ion-icon [name]="item.icon" item-start></ion-icon>
+				<h2>{{ item.name }}</h2>
+				<p>{{ item.yearsOfExperience }} years of {{ item.skill }} Experience</p>
+			</button>
+
+			<ion-item-options>
+				<button ion-button color="secondary" (click)="showData(item)">
+					<ion-icon name="menu"></ion-icon>
+					More
+				</button>
+				<button ion-button color="danger" (click)="deleteData(item)">
+					<ion-icon name="trash"></ion-icon>
+					Delete
+				</button>
+			</ion-item-options>
+
+			<ion-item-options side="left" (ionSwipe)="archiveData(item)">
+				<button ion-button color="primary" expandable (click)="archiveData(item)">
+					<ion-icon name="archive" class="expand-hide"></ion-icon>
+					<div class="expand-hide">Archive</div>
+					<ion-spinner id="archive-spinner"></ion-spinner>
+				</button>
+			</ion-item-options>
+		</ion-item-sliding>
+	</ion-list>
+</ion-content>

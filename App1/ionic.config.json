@@ -1,0 +1,8 @@
+{
+  "name": "Starter",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

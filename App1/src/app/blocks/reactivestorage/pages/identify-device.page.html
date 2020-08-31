@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>Identify Device</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<form (submit)="identifyDevice()" [formGroup]="formGroup">
+		<ion-item>
+			<ion-label color="dark" [position]="'stacked'">Track Number</ion-label>
+			<ion-input clearInput type="text" formControlName="trackNumber"></ion-input>
+		</ion-item>
+	</form>
+</ion-content>

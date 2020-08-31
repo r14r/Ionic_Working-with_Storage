@@ -1,0 +1,7 @@
+{
+  "appId": "de.viainternet.ios.ionic.storage",
+  "appName": "app-storage",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

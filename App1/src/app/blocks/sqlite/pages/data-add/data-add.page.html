@@ -1,0 +1,38 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title>{{ title }}</ion-title>
+
+		<ion-buttons end>
+			<a ion-button icon-only>
+				<ion-icon ios="ios-speedometer" md="md-speedometer"></ion-icon>
+			</a>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form>
+		<ion-item>
+			<ion-label>Height</ion-label>
+			<ion-input type="number" pattern="[0-9]*" name="Height" [(ngModel)]="height"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Weight</ion-label>
+			<ion-input type="number" pattern="[0-9]*" name="Weight" [(ngModel)]="weights"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Goal</ion-label>
+			<ion-input type="number" pattern="[0-9]*" name="goal" [(ngModel)]="goal"></ion-input>
+		</ion-item>
+		<br>
+		<br>
+		<br>
+		<button ion-button type="submit" color="bordas" block (click)="getUser()">Aktualisieren</button>
+	</form>
+
+
+</ion-content>
